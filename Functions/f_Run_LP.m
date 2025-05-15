@@ -1,4 +1,4 @@
-function [xsave,usave,time,isave,z_save] = f_Run_LP_conv(G,Su,H,h,c,Hi,Hess,A,B,x0,tend,max_iter,Q_epsilon)
+function [xsave,usave,time,isave] = f_Run_LP(G,Su,H,h,c,Hi,Hess,A,B,x0,tend,max_iter,Q_epsilon)
     n = 1;
     ny = size(A,2);
     nu = size(B,2);
@@ -10,7 +10,6 @@ function [xsave,usave,time,isave,z_save] = f_Run_LP_conv(G,Su,H,h,c,Hi,Hess,A,B,
     usave = zeros(nu,tend);
     isave = zeros(1,tend);
     xsave(:,1)=x0;
-    z_save = zeros(nv,tend);
     
 
     
