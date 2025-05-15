@@ -1,4 +1,4 @@
-function [xsave,usave,time,isave] = f_Run_LP(G,Su,H,h,c,Hi,Hess,A,B,x0,tend,max_iter,Q_epsilon)
+function [xsave,usave,time,isave] = f_Run_Ramp_LP(G,Su,H,h,c,Hi,Hess,A,B,x0,tend,max_iter,Q_epsilon)
     n = 1;
     ny = size(A,2);
     nu = size(B,2);

@@ -20,7 +20,7 @@ max_iter = 400;
 
 [xsave,usave,time2]               = f_linprog_iterative(c,H_ineq,h_ineq,G_eq,C_A,x0,A,B,tend);
 [xsave2,usave2,time3,k3]          = f_run_quadprog_iterative(G_eq,C_A,H_ineq,h_ineq,c,Hess,A,B,x0,tend,max_iter);
-[x,u,time1,k]               = f_Run_LP(G_eq,C_A,H_ineq,h_ineq,c,Hess_inv,Hess,A,B,x0,tend,max_iter,Q_epsilon);
+[x,u,time1,k]                     = f_Run_Ramp_LP(G_eq,C_A,H_ineq,h_ineq,c,Hess_inv,Hess,A,B,x0,tend,max_iter,Q_epsilon);
 compare_solutions(x,xsave,xsave2,time1,time2,time3)
 
 disp(k) %Iteration for each z_k for the ramp function solver
